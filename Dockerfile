@@ -10,6 +10,7 @@ WORKDIR /app
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 RUN pip3 install schedule
+RUN pip3 install python-telegram-bot
 COPY requirements.txt ./requirements.txt
 RUN pip3 install -r requirements.txt
 COPY start.sh start.sh
